@@ -1,0 +1,47 @@
+
+extends layout 
+
+block layout-content
+	div.view
+		p Please fill out the form below.
+		form(method='POST', action='')
+			fieldset(style="border: rgba(1, 118, 118, 0.5);")
+				legend Blogger's information
+				label(for = "blogger_name") Author's name: 
+				input(id = "blogger_name" name = "blogger_name" type = "text" size="70" placeholder = "You can use a nickname here" autofocus="on")
+				br
+				label(for = "about_author") About the Author: 
+				br
+				textarea(id = "about_author" name = "about_author" placeholder="(optional): share abit about yourself in a few sentences or a couple of adjectives &#128515;. It could be a general description or something about you that led you to write this blog. This info will be shared with those who read your blog" rows = "4" cols="100")
+				br
+			fieldset(style="border: rgba(1, 118, 118, 0.5);")
+				legend Blog information 
+				label(for = "blog_title") Title of the blog: 
+				input(id = "blog_title" name = "blog_title" type = "text" size="70" value=(undefined===blog_title ? '' : blog.title), required='true')
+				br
+				label(for = "blog") Blog content: 
+				br
+				textarea(id="blog" name = "blog" type = "text" placeholder="You can type your blog here or type on your text editor of choice then upload as a .txt file" rows = "10" cols = "100")
+				br
+				input(name = "blog" type = "file")
+				br
+				label(for = "category") Category: 
+				br
+				input(id = "science" name = "cat_science" type = "radio")
+				label(for = "science") Science
+				input(id = "engineering" name = "cat_engineering" type = "radio")
+				label(for = "engineering") Engineering
+				br
+				input(id = "life" name = "cat_life" type = "radio")
+				label(for = "life") Life
+				input(id = "school" name = "cat_school" type = "radio")
+				label(for = "school") School
+				br
+				label(for = "theme_color") Choose a theme color for your blog page 
+				input(id = "theme_color" name = "theme_color" type = "color")
+				br
+				button(type='submit') Submit
+		if errors
+			ul 
+				for error in errors
+					li!= error.msg

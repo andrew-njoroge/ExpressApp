@@ -1,0 +1,15 @@
+extends layout 
+
+block layout-content 
+    div.view
+        div.banner
+            h1 SEES BLOGS 
+            b Title: #{title}
+            br
+            b Author:
+                a(href=author.url) #{author}
+        div.main
+            i post date: #{date}
+            p #{blog}
+            h3 About Author 
+            p #{about_author}

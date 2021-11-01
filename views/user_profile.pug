@@ -1,0 +1,22 @@
+doctype html
+head
+  title Login Register App
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  link(rel='stylesheet' href='/main.css')
+.col-md-4.col-md-offset-4.form-card
+  div
+    p Profile Detail
+  div
+    center
+      table.table.table-hover.text-center
+        tr
+          td Name 
+          td #{name}
+        tr
+          td Email 
+          td #{email}
+  #LangTable.abc
+    a(href='/users/logout') Logout
+

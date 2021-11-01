@@ -1,0 +1,43 @@
+extends layout
+
+block layout-content
+    div.View
+        div.sidebar 
+            div.post_blog
+                h3 
+                    a(href="/blogs/create") Write a blog!
+                p Become a member of the SEES writing community and share a blog &#128515; 
+            div.recentsbox
+                div.recent_blog
+                    h4
+                        a(href="/blogs/idforthis") Uptown funk
+                    span Bruno Mars
+            div.authors
+                p 
+                    a(href = "/blogs/authors") Click here 
+                | to have a look at some of the authors.
+        div.main
+            div.banner
+                h1 #{title}
+            hr
+            div.introduction
+                p Here at SEES we embrace peoples ideas and stories. This is a space for those good with words to express themselves and their ideas. Whatever is posted here gets read by all registered members.You too have a chance to share a blog. Just write one and send it to sees@students.uonbi.ac.ke. It will be reviewed and posted in 2 days max. Meanwhile, enjoy some lovely insights from your fellow students. 
+            div.blogsbox
+                each blog in list
+                    div.ablog
+                        img(src = '/dog_image.jpg' alt = "Dog image") 
+                        br
+                        b Title: 
+                        a(href=blog.url) #{blog.title}   
+                        br
+                        b Author: 
+                        span #{blog.author}
+                        p #{blog.blog}
+                        hr
+                else
+                    li There are no blogs.
+        
+
+    
+      
+                        

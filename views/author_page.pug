@@ -1,0 +1,12 @@
+extends layout 
+
+block layout-content 
+    div.view
+        div.banner
+            h1 #{author}
+        div.main
+            each blog in author_blogs
+                div.box
+                    b #{blog.title}
+                    i #{blog.time}
+                    p #{blog}

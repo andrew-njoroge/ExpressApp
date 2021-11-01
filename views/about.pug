@@ -1,0 +1,169 @@
+doctype html
+| PASTE YOUR HTML CODE HERE
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title UON | SEES 
+  link(rel='stylesheet' href="/style.css")
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css' integrity='sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni' crossorigin='anonymous')
+.header
+  .container
+    .navbar
+      .logo
+        img(src='static/images/12.jpeg' width='65px')
+      nav
+        ul#MenuItems
+          li
+            a(href='/home') Home
+          li
+            a(href='/blog') Blog
+          li
+            a(href='/gallery') Gallery
+          li
+            a(href='/about') About 
+          li
+            a(href='/account') Account 
+      a(href='/cart')
+        img(src="{{ url_for( 'static', filename='images/cart2.png') }}" width='30px' height='30px')
+      img.menu-icon(src="{{ url_for( 'static', filename='images/pic14.png') }}" onclick='menutoggle()')
+    .row
+    .col-2
+      h1 Who We Are!
+      p
+        | We, the students of the University of Nairobi under the department of Electrical and
+        | information Engineering, in order to gain the benefits inherent in the organization of a
+        | government of students, further interests of the students within the university and the
+        | general community, encourage the greatest level of cooperation and communication
+        | with Department and administration, and to assist in all manners consistent with the
+        | policies and regulations of the university in the pursuit of excellence in all of student life,
+        | do hereby establish this constitution for the society of electrical engineering students as
+        | one of the bodies governing students at the University of Nairobi.
+        br
+        |  Let&apos;s engineeer some fun.
+      a.btn(href='') READ MORE &#x27BE;
+    .col-2
+      img(src='static/images/15.jpg')
+// --------------------- Reviews ------------------------
+.reviews
+  .small-container
+    .row
+      .col-3
+        p
+          | I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.
+        img(src='static/images/111.jpg')
+        h3 Victoria Munuve
+      .col-3
+        p
+          | I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.
+        img(src='static/images/2.jpg')
+        h3 Brendan Kipkosgei
+      .col-3
+        p
+          | I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.
+        img(src='static/images/3.jpg')
+        h3 Dorah Rotich
+.reviews
+  .small-container
+    .row
+      .col-3
+        p
+          | I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.
+        img(src='static/images/4.jpg')
+        h3 Stephanie Cherono
+      .col-3
+        p
+          | I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.
+        img(src='static/images/5.jpg')
+        h3 Celestine Akinyi
+      .col-3
+        p
+          | I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.
+        img(src='static/images/6.jpg')
+        h3 MK Saruni
+.reviews
+  .small-container
+    .row
+      .col-3
+        p
+          | I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.
+        img(src='static/images/7.jpg')
+        h3 Rita Mueni
+      .col-3
+        p
+          | I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.
+        img(src='static/images/8.jpg')
+        h3 Bill Mbogho
+      .col-3
+        p
+          | I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.
+        img(src='static/images/1.jpg')
+        h3 Peter Juma
+.reviews
+  .small-container
+    .row
+      .col-3
+        p
+          | I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.
+        img(src='static/images/99.jpg')
+        h3 Joshua Manani
+      .col-3
+        p
+          | I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.
+        img(src='static/images/10.jpg')
+        h3 Charles Mwita
+      .col-3
+        p
+          | I have owned cameras for many years but always purchased Fuji or Olympus and decided it was time to see why everyone loved a Nikon camera. I also have a small business and wanted to update my photography for small item product shots. I love my new camera! This camera is very easy to use and takes excellent photos. I also love nature photography and enjoy shooting wildlife.
+        img(src="{{ url_for( 'static', filename='images/pic2.jpg') }}")
+        h3 Freshman Rep
+// --------------------- Sponsors ------------------------
+.brands
+  .small-container
+    .row
+      .col-5
+        img(src="{{ url_for( 'static', filename='images/asuslogo.png') }}")
+      .col-5
+        img(src="{{ url_for( 'static', filename='images/hplogo.png') }}")
+      .col-5
+        img(src="{{ url_for( 'static', filename='images/canonlogo.png') }}")
+      .col-5
+        img(src="{{ url_for( 'static', filename='images/redmilogo.png') }}")
+      .col-5
+        img(src="{{ url_for( 'static', filename='images/panasoniclogo.png') }}")
+// --------------------- footer ------------------------
+.footer
+  .container
+    .row
+      .footer-col-1
+        h3 Download our App
+        p Download our Android and IOS apps
+        .app-logo
+          img(src="{{ url_for( 'static', filename='images/mitambozlogo.png') }}")
+          img(src="{{ url_for( 'static', filename='images/mitambozlogo.png') }}")
+      .footer-col-3
+        h3 Useful Links
+        ul
+          li Gallery
+          li Blogs
+          li Privacy Policy
+          li News
+      .footer-col-4
+        h3 Connect With Us!
+        ul
+          li Facebook
+          li Instagram
+          li Youtube
+          li Twitter
+    hr
+    p.copyright Copyright 2021 - SEES UoN
+script.
+  var MenuItems = document.getElementById("MenuItems");
+  MenuItems.style.maxHeight = "0px";
+  function menutoggle(){
+  if ( MenuItems.style.maxHeight == "0px")
+  { MenuItems.style.maxHeight = "200px";}
+  else
+  { MenuItems.style.maxHeight = "0px";}
+  }

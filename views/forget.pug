@@ -1,0 +1,55 @@
+doctype html
+head
+  title Login Register App
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  link(rel='stylesheet' href='/main.css')
+  script(type='text/javascript').
+    $(document).ready(() => {
+    $("#form2").submit((event) => {
+    event.preventDefault();
+    $.ajax({
+    type: 'POST',
+    url: '/forgetpass',
+    data: $('#form2').serialize(),
+    dataType: "json",
+    success: (response) => {
+    //alert("a");
+    //console.log(response.Success);
+    $('#form2')[0].reset();
+    //alert("abc");
+    document.getElementById("check").innerHTML = response.Success;
+    setTimeout(() => {
+    document.getElementById("check").innerHTML = "";
+    }, 3000);
+    if (response.Success == "Password changed!") {
+    document.getElementById("aa").click();
+    };
+    },
+    error: () => {
+    }
+    })
+    });
+    });
+.col-md-4.col-md-offset-4.form-card
+  div
+    p Change Password
+  .form-group
+    form#form2(method='post')
+      input.form-control(type='text' name='email' placeholder='E-mail' required='')
+      br
+      input.form-control(type='password' name='password' placeholder='Password' required='')
+      br
+      input.form-control(type='password' name='passwordConf' placeholder='Confirm Password' required='')
+      br
+      input.btn.btn-success(type='submit' value='Change')
+  .mssg.bg-danger
+    span#check
+  #LangTable
+    a#aa(href='/users/login')
+  #LangTable
+    span Go back to 
+    a(href='/users/register') Register
+    |  or 
+    a(href='/users/login') Login

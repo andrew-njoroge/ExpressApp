@@ -1,0 +1,31 @@
+extends layout 
+
+block layout-content 
+    div.view
+        div.sidebar 
+            div.post_blog
+                h3 
+                    a(href="/blogs/create") Write a blog!
+                p Become a member of the SEES writing community and share a blog &#128515; 
+            div.recentsbox
+                div.recent_blog
+                    h4
+                        a(href="/blog/idforthis") Uptown funk
+                    span Bruno Mars
+        div.main
+            div.banner
+                h1 #{title}
+            hr
+            div.introduction
+                p Click on an author to view some of their blogs and articles 
+            div.listBox
+                each author in list
+                    div.anAuthor
+                        strong #{author.author_name}
+                        p #{author.about_author}
+                        hr
+                else 
+                    p There are no authors yet.        
+
+
+
